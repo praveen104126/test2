@@ -1,0 +1,89 @@
+<html>
+<head>
+ <link href="Login.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Stint+Ultra+Condensed' rel='stylesheet' type='text/css'>
+<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+ <script type="text/javascript">
+ var username = document.login.username.value;
+ var password = document.login.password.value;
+ var temp= isNaN(username);
+ function validate(){
+	 if(username=="" && password=="")
+				{
+				alert("Please Dont Leave the UserName And Password Empty");
+				}
+	else if(username=="")
+				{
+				alert("Please Dont Leave UserName Empty")
+				}
+	else if (username=="User")
+					{
+	       				if (password=="")
+							{
+							alert("Please dont Leave Your Password Empty");
+							}
+						else if(password=="UserPass")
+							{
+							alert("Login Successfull.Please click ok")
+							window.location="LoginSuccessfull.html";
+							}
+						else
+							{
+							alert("Wrong Password");
+							}
+					}
+	else if (password=="UserPass" &&username!=="User")
+		{
+			alert("Invalid UserName ");
+		}
+	else
+		{
+		alert ("wrong Details");
+		}
+		}
+ </script>
+</head>
+<body>
+<div class="signform">
+
+   <!-- left side will be in the top at 640px screen-->
+<div class="left">
+<div class="bts">
+<a href="https://www.facebook.com/" class="fblogin"><i class="fa fa-facebook"></i><span>Sign in with Facebook</span></a>
+<a href="https://accounts.google.com/o/oauth2/auth?redirect_uri=http://1-dot-socialnetwork-1.appspot.com/SocialNetworkServlet&response_type=code&client_id=294648674133-1csacmjhne5s0eo58kcltug48rri6p32.apps.googleusercontent.com&approval_prompt=force&scope=email&access_type=online" class="gplogin"><i class="fa fa-google-plus"></i><span>Sign in with Google</span></a>
+<a href="https://twitter.com/" class="twlogin"><i class="fa fa-twitter"></i><span>Sign in with twitter</span></a>
+</div>
+</div>
+<!-- end left side -->
+  <!-- right side will be in the bottom at 640px screen-->
+  
+<div class="right">
+
+  <div class="headit">
+<h>LOGIN HERE (OR)</h> <a href="SignUpProfileStartUp.html">SIGN UP NOW</a>
+  </div>
+<form name="login">
+<div class="input-group margin-bottom-sm">
+  <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+  <input class="form-control" type="text" name="username" placeholder="USER NAME">
+</div>
+<div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+  <input class="form-control" type="password" name="password" placeholder="PASSWORD">
+</div>
+<input class="subbt" type="submit" value="Login" onclick="validate()"/>
+</form>
+<a>FORGOT YOUR PASSWORD?</a>
+<h3>
+<a href="AdminLogin.html">
+<span id="sp">ADMIN</span>	
+</a>
+</h3>
+</div>
+  <!-- end left side -->
+  </div>
+  </body>
+ </html>

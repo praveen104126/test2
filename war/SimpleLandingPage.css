@@ -1,0 +1,135 @@
+body { 
+
+background-image:url("https://unsplash.imgix.net/uploads/1412112828986a673b954/1d8ef901?q=75&fm=jpg&s=9c44bb02d0811d30403b18a15a70e6a2");
+background-size:100% 100%;
+background-attachment:fixed;
+background-position:top left;
+margin:auto 0;
+}
+
+
+#slogan {
+
+margin:auto;
+position:absolute;
+top:0; bottom:0; left:0; right:0;
+height:100px;
+width:800px;
+background:#040B11;
+color:#7AB4E1;
+font-family: 'Bree Serif', serif;
+font-size:50px;
+line-height:100px;
+padding:5px;
+text-align:center;
+border:5px solid #7AB4E1 ;
+border-left-style:none;
+border-right-style:none;
+letter-spacing:10px;
+}
+
+#menu {
+
+margin:auto;
+height:50px;
+width:800px;
+font-family:;
+text-decoration:none;
+line-height:50px;
+text-align:center;
+}
+
+#menu ul { list-style:none; margin:0; padding:0; word-spacing:20px;}
+#menu ul li {
+
+display:inline;
+font-family: 'Bree Serif', serif;
+font-size:25px;
+text-decoration:none;
+}
+#menu ul li a  {
+
+display:inline;
+font-family: 'Bree Serif', serif;
+font-size:25px;
+text-decoration:none;
+color:black;
+}
+
+#menu ul li:hover { color:#7AB4E1; cursor:pointer;}
+
+#menu ul li a:link
+{
+	
+	text-decoration:none;
+}
+
+#menu ul li a:hover { color:#7AB4E1; cursor:pointer;}
+#top {
+
+height:5px;
+width:100%;
+background:#7AB4E1;
+position:fixed;
+top:0;
+}
+
+#bottom {
+height:5px;
+width:100%;
+background:#7AB4E1;
+position:fixed;
+bottom:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>SocialNetworkServlet</servlet-name>
+		<servlet-class>com.socialnetwork.SocialNetworkServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SocialNetworkServlet</servlet-name>
+		<url-pattern>/SocialNetworkServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DataStroreServlet</servlet-name>
+		<servlet-class>com.socialnetwork.DataStroreServlet</servlet-class>
+	</servlet>
+	
+	
+	<servlet-mapping>
+		<servlet-name>DataStroreServlet</servlet-name>
+		<url-pattern>/DataStroreServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LoginCheck</servlet-name>
+		<servlet-class>com.socialnetwork.LoginCheck</servlet-class>
+	</servlet>
+	
+	
+	<servlet-mapping>
+		<servlet-name>LoginCheck</servlet-name>
+		<url-pattern>/LoginCheck</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DataStore</servlet-name>
+		<servlet-class>com.socialnetwork.DataStore</servlet-class>
+	</servlet>
+	
+	
+	<servlet-mapping>
+		<servlet-name>DataStore</servlet-name>
+		<url-pattern>/DataStore</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	<welcome-file-list>
+		<welcome-file>SimpleLandingPage.html</welcome-file>
+	</welcome-file-list>
+</web-app>

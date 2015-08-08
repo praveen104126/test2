@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Upload Photo</title>
+<link href="UploadPicture.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+ <script type="text/javascript">
+ $(function upload() {
+		var preview = {
+				init: function() {
+						preview.setPreviewImg();
+						preview.listenInput();
+				},
+				setPreviewImg: function(fieldImg) {
+						var path = $(fieldImg).val();
+						var fieldUpload = $(fieldImg).siblings('.field-file-upload');
+
+						if (!path) {
+								$(fieldUpload).val('upload photo');
+						} else {
+								path = path.replace(/^C:\\fakepath\\/, "");
+								$(fieldUpload).val(path);
+
+								preview.showPreview(fieldImg, path);
+						}
+				},
+				showPreview: function(fieldImg, path) {
+						var file = $(fieldImg)[0].files;
+
+						if (file && file[0]) {
+								var reader = new FileReader();
+								var fieldUpload = $(fieldImg).siblings('.field-file-upload');
+
+								reader.onload = function(e) {
+										var previewImg = $(fieldImg).parent().siblings('.preview');
+										var img = $(previewImg).find('img');
+
+										if (img.length == 0) {
+												$(previewImg).html('<img src="' + e.target.result + '" alt=""/>');
+										} else {
+												img.attr('src', e.target.result);
+										}
+
+										fieldUpload.val(path);
+								}
+
+								reader.onloadstart = function() {
+										$(fieldUpload).val('uploading..');
+								}
+
+								reader.readAsDataURL(file[0]);
+						}
+				},
+				listenInput: function() {
+						$('.field-file-upload-native').on('change', function() {
+								preview.setPreviewImg(this);
+						});
+				}
+		}
+		
+		preview.init();
+});
+</script>
+</head>
+<body>
+<div class="preview"></div>
+<div class="file-upload-wrapper">
+		<input type="file" name="file" class="field-file-upload-native" accept="image/*" />
+		<input type="text" disabled placeholder="upload image" class="field-file-upload" onclick= upload()/>
+</div>
+<a class="bttn">CREATE NEW PROFILE</a>
+</body>
+</html>
